@@ -6,7 +6,7 @@ pipeline {
             agent any
 
             options {
-                skipDefaultCheckout true
+                skipDefaultCheckout()
             }
 
             steps {
