@@ -10,8 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project...'
-                // Your build steps go here
+                sh 'cat normal.txt'
             }
         }
     }
