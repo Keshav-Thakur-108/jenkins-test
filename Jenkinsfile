@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Master') {
             when {
-                branch: 'master'
+                branch 'master'
             }
             steps {
                 sh 'cat normal.txt'
@@ -14,6 +14,9 @@ pipeline {
         }
 
         stage('Dev') {
+            when {
+                branch 'dev'
+            }
             options {
                 skipDefaultCheckout()
             }
