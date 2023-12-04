@@ -1,13 +1,11 @@
 pipeline {
-    agent {
-        label 'agent1'
-    }
+    agent any
 
     stages {
 
         stage('Build') {
             when {
-                tag '1.0'
+                tag '2.0'
             }
 
             steps {
