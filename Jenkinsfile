@@ -4,6 +4,17 @@ pipeline {
     }
 
     stages {
+
+        stage('Build') {
+            when {
+                tag '1.0'
+            }
+
+            steps {
+                echo 'Hello world'
+            }
+        }
+
         stage('Master') {
             when {
                 branch 'master'
