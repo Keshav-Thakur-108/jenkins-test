@@ -13,6 +13,16 @@ pipeline {
             }
         }
 
+        stage('Build Changelog') {
+            when {
+                changelog '.*some_text.*'
+            }
+
+            steps {
+                echo 'Build Changelog worked just fine'
+            }
+        }
+
         stage('Master') {
             when {
                 branch 'master'
